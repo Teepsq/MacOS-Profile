@@ -2,7 +2,7 @@ import { create } from "zustand";
 import {INITIAL_Z_INDEX, WINDOW_CONFIG} from "#constants/index.js";
 import {immer} from "zustand/middleware/immer";
 
-const useWindowStore = () => create(
+const useWindowStore = create(
     immer((set) => ({
         windows: WINDOW_CONFIG,
         nextZIndex: INITIAL_Z_INDEX + 1,
